@@ -8,10 +8,10 @@
   
   ## Table of contents
   
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Contributing](#contributing)
-    -[License](#License)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#how-to-contribute)
+* [License](#license)
 
 ## Installation:
 
@@ -23,16 +23,16 @@
   
 ## License:
 
-  https://opensource.org/licenses/MIT
+  This app utilizes MIT License. For further information please consult https://opensource.org/licenses/MIT.
 
   
 ## How to Contribute:
 
-  noep
+  Contact me
   
 ## Tests:
 
-  nope
+  no tests
   
 ## Questions?
 

@@ -1,3 +1,4 @@
+// Array including all options for licences in the prompt section and URLs to information about the license.
 const licenseArray = [
   {
     name:'GNU AGPLv3',
@@ -42,37 +43,38 @@ const licenseArray = [
 ]
 
 function generateMarkdown(responses) {
+  //Logical arguments to determine what is included in the table of contents. There will always be a license to table of contents will always exist. 
   let contents = `## Table of contents
   `
   if (responses.installation !== ``) {
     contents += `
-    -[Installation](#installation)`
+* [Installation](#installation)`
   };
   if (responses.usage !== ``) {
     contents += `
-    -[Usage](#usage)`
+* [Usage](#usage)`
   };
   if (responses.contributing !== ``) {
     contents += `
-    -[Contributing](#contributing)`
+* [Contributing](#how-to-contribute)`
   };
   if (responses.license !== ``) {
     contents += `
-    -[License](#License)`
+* [License](#license)`
   };
 
-  // License is of type list, so there will always be an option, I chose what appears to be the most common licenses based on https://choosealicense.com/
+// License is of type list, so there will always be an option, I chose what appears to be the most common licenses based on https://choosealicense.com/
   function renderLicenseLink() {
     licenceIndex=licenseArray.map(object => object.name).indexOf( responses.license)
     markdown += `
 ## License:
 
-  ${licenseArray[licenceIndex].url}
+  This app utilizes ${responses.license}. For further information, please consult ${licenseArray[licenceIndex].url}.
 
   `
   } 
 
-  // TODO: Create a function to generate markdown for README
+// Generate Markdown, License badge generated using the github repository. Must set licence in repository for shields.io to detect it.
   let markdown = 
   `# ${responses.title}
 

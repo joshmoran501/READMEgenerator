@@ -13,9 +13,9 @@ const questions = [
         message: `What is your github username? (Do not include @)`,
         name: `username`,
         default: `joshmoran501`,
-        validate: async function makeRequest (answer) {
-                let GitHubUsername = await fetch(`https://api.github.com/users/${answer}`);
-                if(GitHubUsername.statusText === `Not Found`) {console.log(`valid username required`)} else return true;
+        validate: async function makeRequest (answer) {  
+            let GitHubUsername = await fetch(`https://api.github.com/users/${answer}`);
+                if(GitHubUsername.statusText === `Not Found`) {console.log(`valid username required`)} else return user, true;
                 }
     },
     {
