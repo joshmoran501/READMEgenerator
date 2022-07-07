@@ -8,10 +8,10 @@
   
   ## Table of contents
   
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Contributing](#contributing)
-    -[License](#License)
+    - [Installation](#Installation:)
+    - [Usage](#Usage:)
+    - [Contributing](#How to Contribute:)
+    - [License](#License:)
 
 ## Installation:
 
@@ -28,7 +28,7 @@
   
 ## How to Contribute:
 
-  noep
+  nope
   
 ## Tests:
 
