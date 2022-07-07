@@ -44,7 +44,7 @@ const questions = [
         type: `input`,
         message: `Project description:`,
         name: `description`,
-        default: `Generates a professional README file based on command line promts`,
+        default: `Generates a professional README file based on command line prompts`,
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log(`A valid description is required`)

@@ -42,67 +42,95 @@ const licenseArray = [
 ]
 
 function generateMarkdown(responses) {
-  let contents = `## Table of contents`
+  let contents = `## Table of contents
+  `
   if (responses.installation !== ``) {
-    contents += `[Installation](#installation)`
+    contents += `
+    -[Installation](#installation)`
   };
   if (responses.usage !== ``) {
-    contents += `[Usage](#usage)`
+    contents += `
+    -[Usage](#usage)`
   };
   if (responses.contributing !== ``) {
-    contents += `[Contributing](#contributing)`
+    contents += `
+    -[Contributing](#contributing)`
   };
   if (responses.license !== ``) {
-    contents += `[License](#License)`
+    contents += `
+    -[License](#License)`
   };
 
   // License is of type list, so there will always be an option, I chose what appears to be the most common licenses based on https://choosealicense.com/
   function renderLicenseLink() {
     licenceIndex=licenseArray.map(object => object.name).indexOf( responses.license)
-    markdown += licenseArray[licenceIndex].url
+    markdown += `
+## License:
+
+  ${licenseArray[licenceIndex].url}
+
+  `
   } 
 
   // TODO: Create a function to generate markdown for README
   let markdown = 
-  `# ${responses.title}\
+  `# ${responses.title}
 
   ![GitHub license](https://img.shields.io/github/license/${responses.username}/${responses.repo})
   
-  ## Description:\
+## Description:
   
-  ${responses.description}`
+  ${responses.description}
+  
+  `
 
   markdown += contents
   
-  if (responses.installation !== ``) {
-    markdown += `## Installation:\
-    ${responses.installation}`
-  }
+if (responses.installation !== ``) {
+  markdown += `
 
-  if (responses.usage !== ``) {
-    markdown += `## Usage:\
-    ${responses.usage}`
-  }
+## Installation:
 
-  renderLicenseLink()
+  ${responses.installation}
+  `
+}
+
+if (responses.usage !== ``) {
+  markdown += `
+## Usage:
+
+  ${responses.usage}
+  `
+}
+
+renderLicenseLink()
 
 
-  if (responses.contributing !== ``) {
-    markdown += `## How to Contribute:\
-    ${responses.contributing}`
-  }
+if (responses.contributing !== ``) {
+  markdown += `
+## How to Contribute:
 
-  if (responses.tests !== ``) {
-    markdown += `## Tests:\
-    ${responses.tests}`
-  }
+  ${responses.contributing}
+  `
+}
+
+if (responses.tests !== ``) {
+  markdown += `
+## Tests:
+
+  ${responses.tests}
+  `
+}
 
 // Questions section
-  markdown += `## Questions?\
-  Github: [${responses.username}](https://github.com/${responses.username})\
+markdown += `
+## Questions?
+
+  Github: [${responses.username}](https://github.com/${responses.username})
+
   Email: [${responses.email}](${responses.email})
   `
-
+return markdown
 }
 
 module.exports = generateMarkdown;
