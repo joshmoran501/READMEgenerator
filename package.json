@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/joshmoran501/READMEgenerator#readme",
   "dependencies": {
-    "inquirer": "^9.0.0"
+    "inquirer": "^8.2.0",
+    "node-fetch": "^2.6.7"
   }
 }
