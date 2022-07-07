@@ -10,7 +10,6 @@
   
     * [Installation](#installation)
     * [Usage](#usage)
-    * [Contributing](#contributing)
     * [License](#license)
 
 ## Installation:
@@ -25,14 +24,6 @@
 
   https://opensource.org/licenses/MIT
 
-  
-## How to Contribute:
-
-  nope
-  
-## Tests:
-
-  nope
   
 ## Questions?
 
