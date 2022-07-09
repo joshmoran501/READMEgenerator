@@ -1,10 +1,10 @@
-# README Generator
+# Test README
 
-  ![GitHub license](https://img.shields.io/github/license/joshmoran501/READMEgenerator)
+  ![GitHub license](https://img.shields.io/github/license/joshmoran501/README-example)
   
 ## Description:
   
-  Generates a professional README file based on command line prompts
+  demonstrating the function of the READMEgenerator code
   
   ## Table of contents
   
@@ -19,16 +19,16 @@
   
 ## Usage:
 
-  Use this to quickly make a professional README so you can get back to coding!
+  Provide an example of the functionality of the README generator app
   
 ## License:
 
-  This app utilizes MIT License. For further information please consult https://opensource.org/licenses/MIT.
+  This app utilizes ISC License. For further information, please consult https://opensource.org/licenses/ISC.
 
   
 ## How to Contribute:
 
-  Contact me
+  email me!
   
 ## Tests:
 
